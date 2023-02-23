@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "name": "Mohamed Abdo",
+      "phone": "01063470569",
+      "email": "mohamedabdo6440@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "sami",
+      "phone": "01063470569",
+      "email": "ahmed@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "kareem",
+      "phone": "01063470569",
+      "email": "61ccaa5adf@inboxmail.life",
+      "id": 3
+    },
+    {
+      "name": "ahmed",
+      "phone": "01063470569",
+      "email": "ahmed@gggf",
+      "id": 4
+    }
+  ]
+}

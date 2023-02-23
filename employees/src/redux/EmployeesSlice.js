@@ -6,7 +6,7 @@ export const getAllEmployee = createAsyncThunk('employees/getAllEmployee', async
     const { rejectWithValue } = thunkAPI;
     try {
 
-        const res = await fetch('http://localhost:3009/employees');
+        const res = await fetch('https://fakeserver.onrender.com/employees');
         const data = await res.json();
         return data;
     } catch (error) {
@@ -18,7 +18,7 @@ export const getAllEmployee = createAsyncThunk('employees/getAllEmployee', async
 export const insertEmployee = createAsyncThunk('employees/insertEmployee', async (AddEmployee, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
-        const res = await fetch('http://localhost:3009/employees', {
+        const res = await fetch('https://fakeserver.onrender.com/employees', {
             method: 'POST',
             body: JSON.stringify(AddEmployee),
             headers: { 'Content-Type': 'application/json;charset=UTF-8', },
@@ -37,7 +37,7 @@ export const insertEmployee = createAsyncThunk('employees/insertEmployee', async
 export const deleteEmployee = createAsyncThunk('employees/deleteEmployee', async (id, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
-        await fetch(`http://localhost:3009/employees/${id}`, {
+        await fetch(`https://fakeserver.onrender.com/employees/${id}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json;charset=UTF-8', },
         });
@@ -52,7 +52,7 @@ export const deleteEmployee = createAsyncThunk('employees/deleteEmployee', async
 export const editEmployee = createAsyncThunk('employees/editEmployee', async (Employee, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
-        const res = await fetch(`http://localhost:3009/employees/${Employee.id}`, {
+        const res = await fetch(`https://fakeserver.onrender.com/employees/${Employee.id}`, {
             method: 'PUT',
             body: JSON.stringify(Employee),
             headers: { 'Content-Type': 'application/json;charset=UTF-8', },
